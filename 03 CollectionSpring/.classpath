@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-aop-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-aspects-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-beans-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-context-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-context-support-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-core-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-expression-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-instrument-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-instrument-tomcat-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-jdbc-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-jms-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-messaging-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-orm-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-oxm-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-test-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-tx-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-web-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-webmvc-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-webmvc-portlet-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/spring-websocket-4.2.0.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/Software Development/Installed Software/spring-framework/libs/commons-logging-1.2/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
