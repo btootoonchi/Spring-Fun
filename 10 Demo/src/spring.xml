@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="triangle" class="com.springtest.Triangle" name="triangle-name"> <!-- name is another way to define aliases -->
+		<!-- <constructor-arg type="java.lang.String" value="$12345"></constructor-arg> -->
+
+		<!-- <constructor-arg type="java.lang.String" value="$12345"></constructor-arg> 
+			<constructor-arg type="int" value="20"></constructor-arg> -->
+
+		<constructor-arg index="0" value="$12345"></constructor-arg>
+		<constructor-arg index="1" value="20"></constructor-arg>
+
+		<property name="type" value="Equilateral"></property>
+
+		<property name="pointA" ref="zeroPoint"></property>
+		<!-- <property name="pointA">
+			<idref bean="zeroPoint"/> idref is another way to define a ref, but if there is no ref, the application throws an exception. 
+		</property> -->
+		
+		<property name="pointB">
+			<bean class="com.springtest.Point">  <!-- Inner Bean -->
+				<property name="x" value="-20"></property>
+				<property name="y" value="0"></property>
+			</bean>
+		</property>
+		
+		<property name="pointC">
+			<bean class="com.springtest.Point">
+				<property name="x" value="0"></property>
+				<property name="y" value="20"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="zeroPoint" class="com.springtest.Point"> <!-- common object -->
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+	<alias name="triangle" alias="triangle-aliases"/>
+</beans>
