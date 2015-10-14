@@ -1,36 +1,20 @@
 package com.springtest;
 
+import java.util.List;
+
 public class Triangle {
 	private String type;
 	private String price;
 	private int height;
 	
-	private Point pointA;
-	private Point pointB;
-	private Point pointC;
+	private List<Point> points;
 	
-	public Point getPointA() {
-		return pointA;
+	public List<Point> getPoints() {
+		return points;
 	}
 
-	public void setPointA(Point pointA) {
-		this.pointA = pointA;
-	}
-
-	public Point getPointB() {
-		return pointB;
-	}
-
-	public void setPointB(Point pointB) {
-		this.pointB = pointB;
-	}
-
-	public Point getPointC() {
-		return pointC;
-	}
-
-	public void setPointC(Point pointC) {
-		this.pointC = pointC;
+	public void setPoints(List<Point> points) {
+		this.points = points;
 	}
 
 	public Triangle(String price) {
@@ -52,8 +36,8 @@ public class Triangle {
 	
 	public void draw() {
 		System.out.println("Type is " + this.type + ", price is " + this.price + ", and heoght is " + this.height + " Draw a Triangle!");
-		System.out.println("Point A: (x, y) = (" + getPointA().getX() + ", " + getPointA().getY() + ")");
-		System.out.println("Point B: (x, y) = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
-		System.out.println("Point C: (x, y) = (" + getPointC().getX() + ", " + getPointC().getY() + ")");
+		for(Point point: points) {
+			System.out.println("Point : (x, y) = (" + point.getX() + ", " + point.getY() + ")");
+		}
 	}
 }

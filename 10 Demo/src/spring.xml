@@ -13,13 +13,13 @@
 
 		<property name="type" value="Equilateral"></property>
 
-		<property name="pointA" ref="zeroPoint"></property>
+		<!-- <property name="pointA" ref="zeroPoint"></property> -->
 		<!-- <property name="pointA">
 			<idref bean="zeroPoint"/> idref is another way to define a ref, but if there is no ref, the application throws an exception. 
 		</property> -->
 		
-		<property name="pointB">
-			<bean class="com.springtest.Point">  <!-- Inner Bean -->
+		<!-- <property name="pointB">
+			<bean class="com.springtest.Point">  Inner Bean
 				<property name="x" value="-20"></property>
 				<property name="y" value="0"></property>
 			</bean>
@@ -30,6 +30,14 @@
 				<property name="x" value="0"></property>
 				<property name="y" value="20"></property>
 			</bean>
+		</property> -->
+		
+		<property name="points">
+			<list>
+				<ref bean="zeroPoint" />
+				<ref bean="pointB" />
+				<ref bean="pointC" />
+			</list>
 		</property>
 	</bean>
 
@@ -38,5 +46,15 @@
 		<property name="y" value="0"></property>
 	</bean>
 
+	<bean id="pointB" class="com.springtest.Point"> <!-- common object -->
+		<property name="x" value="-20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="pointC" class="com.springtest.Point"> <!-- common object -->
+		<property name="x" value="0"></property>
+		<property name="y" value="20"></property>
+	</bean>
+	
 	<alias name="triangle" alias="triangle-aliases"/>
 </beans>
