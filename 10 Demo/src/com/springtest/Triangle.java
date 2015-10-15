@@ -7,15 +7,34 @@ public class Triangle {
 	private String price;
 	private int height;
 	
-	private List<Point> points;
-	
-	public List<Point> getPoints() {
-		return points;
+	private Point pointA;
+	public Point getPointA() {
+		return pointA;
 	}
 
-	public void setPoints(List<Point> points) {
-		this.points = points;
+	public void setPointA(Point pointA) {
+		this.pointA = pointA;
 	}
+
+	public Point getPointB() {
+		return pointB;
+	}
+
+	public void setPointB(Point pointB) {
+		this.pointB = pointB;
+	}
+
+	public Point getPointC() {
+		return pointC;
+	}
+
+	public void setPointC(Point pointC) {
+		this.pointC = pointC;
+	}
+
+	private Point pointB;
+	private Point pointC;
+
 
 	public Triangle(String price) {
 		this.price = price;
@@ -36,8 +55,8 @@ public class Triangle {
 	
 	public void draw() {
 		System.out.println("Type is " + this.type + ", price is " + this.price + ", and heoght is " + this.height + " Draw a Triangle!");
-		for(Point point: points) {
-			System.out.println("Point : (x, y) = (" + point.getX() + ", " + point.getY() + ")");
-		}
+		System.out.println("Point A: (x, y) = (" + pointA.getX() + ", " + pointA.getY() + ")");
+		System.out.println("Point B: (x, y) = (" + pointB.getX() + ", " + pointB.getY() + ")");
+		System.out.println("Point C: (x, y) = (" + pointC.getX() + ", " + pointC.getY() + ")");
 	}
 }
