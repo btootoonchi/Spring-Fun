@@ -18,7 +18,7 @@ public class DrawingApp {
 		
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-		Triangle t = (Triangle) context.getBean("triangle-aliases");
+		Triangle t = (Triangle) context.getBean("triangle1");
 
 		t.draw();
 	}
