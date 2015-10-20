@@ -2,7 +2,7 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-	<bean id="triangle" class="com.springtest.Triangle" name="triangle-name"> <!-- name is another way to define aliases -->
+	<bean id="triangle" class="com.springtest.Triangle" name="triangle-name" init-method="myInit" destroy-method="cleanUp"> <!-- name is another way to define aliases -->
 		<!-- <constructor-arg type="java.lang.String" value="$12345"></constructor-arg> -->
 
 		<!-- <constructor-arg type="java.lang.String" value="$12345"></constructor-arg> 
