@@ -68,4 +68,6 @@
 	</bean>
 	
 	<alias name="triangle" alias="triangle-aliases"/>
+	
+	<bean class="com.springtest.DisplayNameBeanPostProcessor"></bean>
 </beans>
