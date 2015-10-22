@@ -53,8 +53,8 @@
 	</bean>
 	
 	<bean id="pointA" class="com.springtest.Point"> <!-- common object -->
-		<property name="x" value="0"></property>
-		<property name="y" value="0"></property>
+		<property name="x" value="${pointA.pointX}"></property>
+		<property name="y" value="${pointA.pointY}"></property>
 	</bean>
 
 	<bean id="pointB" class="com.springtest.Point"> <!-- common object -->
@@ -70,4 +70,10 @@
 	<alias name="triangle" alias="triangle-aliases"/>
 	
 	<bean class="com.springtest.DisplayNameBeanPostProcessor"></bean>
+	
+	<bean class="com.springtest.MyBeanFactoryPostProcessor"></bean>
+	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties"></property>
+	</bean>
 </beans>
