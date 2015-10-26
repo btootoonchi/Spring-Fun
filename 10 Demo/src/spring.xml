@@ -78,7 +78,7 @@
 	</bean>
 	
 	<bean name="circle" class="com.springtest.Circle">
-		<property name="center" ref="pointA"></property>
+		<!-- <property name="center" ref="pointA"></property> -->
 	</bean>
 	
 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
