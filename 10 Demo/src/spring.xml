@@ -61,7 +61,6 @@
 	</bean>
 	
 	<bean id="pointA" class="com.springtest.Point"> <!-- common object -->
-		<qualifier value="circleRelated"></qualifier>
 		<property name="x" value="${pointA.pointX}"></property>
 		<property name="y" value="${pointA.pointY}"></property>
 	</bean>
@@ -87,12 +86,9 @@
 	</bean>
 	
 	<bean name="circle" class="com.springtest.Circle">
-		<!-- <property name="center" ref="pointA"></property> -->
+		
 	</bean>
 	
-	<!-- <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" /> -->
-	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" /> -->
 	<context:annotation-config/>
 	
-	<alias name="pointA" alias="center" />
 </beans>
