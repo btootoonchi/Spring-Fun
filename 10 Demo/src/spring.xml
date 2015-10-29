@@ -85,10 +85,8 @@
 		<property name="locations" value="pointsconfig.properties"></property>
 	</bean>
 	
-	<bean name="circle" class="com.springtest.Circle">
-		
-	</bean>
-	
 	<context:annotation-config/>
+	
+	<context:component-scan base-package="com.springtest"></context:component-scan>
 	
 </beans>
