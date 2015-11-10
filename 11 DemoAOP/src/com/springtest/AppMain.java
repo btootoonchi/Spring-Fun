@@ -12,6 +12,7 @@ public class AppMain {
 		ShapeService shapeService = context.getBean("shapeService", ShapeService.class);
 		
 		shapeService.getCircle().setName("Dummy name!");
+//		shapeService.getCircle().returnName("Return name!");
 		System.out.print(shapeService.getCircle().getName());
 	}
 

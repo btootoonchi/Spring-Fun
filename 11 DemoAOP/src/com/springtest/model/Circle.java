@@ -9,5 +9,12 @@ public class Circle {
 
 	public void setName(String name) {
 		this.name = name;
+		System.out.println("The set name method of the circle class runs and name is "+name);
+	}
+	
+	public String returnName(String name) {
+		this.name = name;
+		System.out.println("Return name: "+name);
+		return name;
 	}
 }

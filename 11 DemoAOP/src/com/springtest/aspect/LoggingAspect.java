@@ -1,6 +1,9 @@
 package com.springtest.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -28,6 +31,18 @@ public class LoggingAspect {
 	public void stringArgumentsMethod() {
 		System.out.println("A method that takes String arguments has been called.");*/
 		System.out.println("A method that takes String arguments has been called. The name is " + name);
+	}
+	
+	@After("args(name)")
+	@AfterReturning("args(name)")
+	@AfterThrowing("args(name)")
+	public void afterAdviceMethod(String name) {
+		System.out.println("After annotation executed. The name is "+ name);
+	}
+	
+	@AfterReturning(pointcut="args(name)", returning="retrunString")
+	public void afterReturnningAdvic(String name, String returnString) {
+		System.out.println("The after returnnig advic runs and name is "+name+". The return string is "+returnString);
 	}
 	
 	@Before("allGetters()")
