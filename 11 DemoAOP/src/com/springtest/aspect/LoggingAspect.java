@@ -1,9 +1,11 @@
 package com.springtest.aspect;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -40,10 +42,10 @@ public class LoggingAspect {
 		System.out.println("After annotation executed. The name is "+ name);
 	}
 	
-	@AfterReturning(pointcut="args(name)", returning="retrunString")
+	/*@AfterReturning(pointcut="args(name)", returning="retrunString")
 	public void afterReturnningAdvic(String name, String returnString) {
 		System.out.println("The after returnnig advic runs and name is "+name+". The return string is "+returnString);
-	}
+	}*/
 	
 	@Before("allGetters()")
 	public void gettingAdvice() {
@@ -58,4 +60,20 @@ public class LoggingAspect {
 //	@Pointcut("within(com.springtest.model.*)") // for all classes 
 //	@Pointcut("within(com.springtest.model..)") //also for sub packages
 	public void allCircleMethods() {}
+	
+	@Around("allGetters()")
+	public Object aroundAdvice(ProceedingJoinPoint preceedingJoinPoint) {
+		Object object = null;
+		try {
+			System.out.println("Before Around Advice");
+			object = preceedingJoinPoint.proceed();
+			System.out.println("After Around Advice");
+		} catch (Throwable e) {
+			System.out.println("Throwing Around Advice");
+//			e.printStackTrace();
+		}
+		System.out.println("After Finally Around Advice");
+		
+		return object;
+	}
 }
